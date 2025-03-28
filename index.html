@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ava Creations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header class="header">
+        <img src="Logo fond blanc.png" alt="Logo" class="logo-img">
+    </header>
+
+    <!-- Section Imagiers -->
+    <section class="section imagiers">
+        <h2>Les Trousseaux-Imagiers</h2>
+        <div class="image-grid">
+            <div class="image-container">
+                <img src="Page garde Animaux.png" alt="Animaux" class="hover-img" data-carousel="animaux">
+                <p class="image-caption">Animaux Starter pack</p>
+                <p class="image-caption">Composé de 20 cartes</p>
+                <p class="image-caption">11,90€</p>
+            </div>
+            <div class="image-container">
+                <img src="Page garde FruitsLegumes.png" alt="Fruits & Légumes" class="hover-img" data-carousel="fruits-legumes">
+                <p class="image-caption">Fruits et Légumes Starter pack</p>
+                <p class="image-caption">Composé de 20 cartes</p>
+                <p class="image-caption">11,90€</p>
+            </div>
+            <div class="image-container">
+                <img src="Page garde Chiffres.png" alt="Chiffres" class="hover-img" data-carousel="chiffres">
+                <p class="image-caption">Les Chiffres</p>
+                <p class="image-caption">Composé de 10 cartes</p>
+                <p class="image-caption">4,90€</p>
+            </div>
+            <div class="image-container">
+                <img src="Page garde Couleurs.png" alt="Couleurs" class="hover-img" data-carousel="couleurs">
+                <p class="image-caption">Les Couleurs</p>
+                <p class="image-caption">Composé de 11 cartes</p>
+                <p class="image-caption">4,90€</p>
+            </div>
+            <div class="image-container">
+                <img src="Page garde ABCDaire.png" alt="ABCDaire" class="hover-img" data-carousel="ABCDaire">
+                <p class="image-caption">L'Abécédaire</p>
+                <p class="image-caption">Composé de 26 cartes</p>
+                <p class="image-caption">11,90€</p>
+            </div>
+            <div class="image-container">
+                <img src="Page garde Vehicules.png" alt="Vehicules" class="hover-img" data-carousel="vehicules">
+                <p class="image-caption">Les Véhicules</p>
+                <p class="image-caption">Composé de 11 cartes</p>
+                <p class="image-caption">4,90€</p>
+            </div>
+            <div class="image-container">
+                <img src="Page garde Formes.png" alt="Formes" class="hover-img" data-carousel="formes">
+                <p class="image-caption">Les Formes</p>
+                <p class="image-caption">Composé de 12 cartes</p>
+                <p class="image-caption">4,90€</p>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Section Mémory -->
+    <section class="section memory">
+        <h2>Les Jeux Memory</h2>
+        <div class="image-grid">
+            <div class="image-container">
+                <img src="Page garde Memo ferme.png" alt="Ferme" class="hover-img" data-carousel="memo_ferme">
+                <p class="image-caption">Thème Ferme</p>
+                <p class="image-caption">Composé de 32 cartes</p>
+                <p class="image-caption">9,90€</p>
+            </div>
+            <div class="image-container">
+                <img src="Page garde Memo jardin.png" alt="Jardin" class="hover-img" data-carousel="memo_jardin">
+                <p class="image-caption">Thème Jardin</p>
+                <p class="image-caption">Composé de 32 cartes</p>
+                <p class="image-caption">9,90€</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Plateaux -->
+    <section class="section plateaux">
+        <h2>Les Planches d'Activités</h2>
+        <div class="image-grid">
+            <div class="image-container">
+                <img src="Page Chiffres.png" alt="p_chiffres" class="hover-img" data-carousel="p_chiffres">
+                <p class="image-caption">Les Chiffres</p>
+                <p class="image-caption">3,90€</p>
+            </div>
+            <div class="image-container">
+                <img src="Page Alphabet.png" alt="p_alphabet" class="hover-img" data-carousel="p_alphabet">
+                <p class="image-caption">L'Alphabet</p>
+                <p class="image-caption">3,90€</p>
+            </div>
+            <div class="image-container">
+                <img src="Page JDS.png" alt="p_jds" class="hover-img" data-carousel="p_jds">
+                <p class="image-caption">Les Jours de la Semaine</p>
+                <p class="image-caption">3,90€</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="info-section">
+        <h2>Pourquoi choisir nos produits ?</h2>
+        <p>Nos produits sont conçus avec soin pour favoriser l'apprentissage et l'éveil des enfants.</p>
+        <p>Chaque carte et chaque jeu sont pensés pour être à la fois éducatifs et ludiques.</p>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contact">CONTACT
+            <p>06.35.18.85.78</p>
+            <p>avacreations.order@gmail.com</p>
+        </div>
+        <div class="bottom-footer"></div>
+    </footer>
+
+    <!-- Lightbox (Carrousel) -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img id="lightbox-img" src="" alt="Image agrandie" />
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+<script>
+const images = document.querySelectorAll('.hover-img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.close-btn');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+let currentIndex = 0;
+let imageList = [];
+
+// Carrousels
+const carousels = {
+    "animaux": ["Page garde Animaux.png", "Animaux 1.png", "Lion.png", "Ours.png", "Papillon.png"],
+    "fruits-legumes": ["Page garde FruitsLegumes.png", "FruitsLegumes 1.png", "Banane.png", "Fraise.png", "Courgette.png"],
+    "chiffres": ["Page garde Chiffres.png", "Chiffres 1.png", "1 - Trousseau.png", "5 - Trousseau.png", "7 - Trousseau.png"],
+    "couleurs": ["Page garde Couleurs.png", "Couleurs 1.png", "Bleu.png", "Rose.png", "Orange.png"],
+    "ABCDaire": ["Page garde ABCDaire.png", "ABCDaire 1.png", "A.png", "H.png", "K.png"],
+    "vehicules": ["Page garde Vehicules.png", "Vehicules 1.png", "Voiture.png", "Moto.png", "Camion de Pompier.png"],
+    "formes": ["Page garde Formes.png", "Formes 1.png", "Carre.png", "Rond.png", "Triangle.png"],
+    "p_chiffres": ["Page Chiffres.png", "P_Chiffres 1.png"],
+    "p_alphabet": ["Page Alphabet.png", "P_Alphabet 1.png"],
+    "p_jds": ["Page JDS.png", "JDS 1.png"],
+    "memo_jardin": ["Page garde Memo jardin.png", "Memo Jardin 1.png"],
+    "memo_ferme": ["Page garde Memo ferme.png", "Memo Ferme 1.png"]
+};
+
+// Ouvrir le carrousel
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        const carouselId = img.getAttribute('data-carousel');
+        imageList = carousels[carouselId] || [img.src];
+        currentIndex = 0;
+        updateLightbox();
+        lightbox.style.display = 'flex';
+    });
+});
+
+// Navigation et fermeture
+function updateLightbox() { lightboxImg.src = imageList[currentIndex]; }
+prevBtn.onclick = () => { currentIndex = (currentIndex - 1 + imageList.length) % imageList.length; updateLightbox(); };
+nextBtn.onclick = () => { currentIndex = (currentIndex + 1) % imageList.length; updateLightbox(); };
+closeBtn.onclick = () => { lightbox.style.display = 'none'; };
+
+// 📌 Fermer le carrousel en cliquant sur le fond noir
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+    }
+});
+
+</script>
