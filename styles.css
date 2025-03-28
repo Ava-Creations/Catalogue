@@ -1,0 +1,161 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: url('texture.jpg'); /* Remplace par une texture légère */
+    background-size: cover;
+    background-attachment: fixed;
+    color: black;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    padding: 20px;
+}
+
+.logo-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* Sections */
+.section {
+    padding: 40px 20px;
+}
+
+/* Couleurs */
+.imagiers { background-color: rgba(168, 234, 239, 0.05); }
+.memo { background-color: rgba(255, 242, 124, 0.05); }
+
+/* Titres */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Grille d'images */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images par ligne */
+    gap: 20px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Texte sous les images */
+.image-caption {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+/* Bouton de fermeture */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.info-section {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.05); /* Léger fond pour séparer visuellement */
+    padding: 30px 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.info-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info-section p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Flèches */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    color: black;
+    border-radius: 50%;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.prev-btn { left: 10%; }
+.next-btn { right: 10%; }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
