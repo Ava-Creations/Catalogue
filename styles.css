@@ -69,6 +69,19 @@ h2 {
     transform: scale(1.05);
 }
 
+.image-container {
+    background: rgba(255, 255, 255, 0.8); /* Léger fond blanc translucide */
+    padding: 15px;
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.image-container:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
+}
+
 /* Texte sous les images */
 .image-caption {
     margin-top: 8px;
@@ -141,19 +154,6 @@ h2 {
     color: black;
     border-radius: 50%;
 }
-
-
-
-.image-container img {
-    border-radius: 10px;
-    border: 3px solid transparent; /* Par défaut, pas de bordure */
-    transition: border 0.3s ease-in-out;
-}
-
-.image-container img:hover {
-    border: 3px solid #FFA500; /* Bordure orange au survol */
-}
-
 
 
 .prev-btn:hover, .next-btn:hover {
