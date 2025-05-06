@@ -195,10 +195,15 @@
     <footer class="footer">
         <div class="contact">CONTACT
             <p>06.35.18.85.78</p>
-            <p>avacreations.order@gmail.com</p>
+            <p>
+                <span id="email">avacreations.order@gmail.com</span>
+                <button onclick="copyEmail()">Copier</button>
+            </p>
         </div>
         <div class="bottom-footer"></div>
     </footer>
+
+
 
     <!-- Lightbox (Carrousel) -->
     <div id="lightbox" class="lightbox">
@@ -265,6 +270,14 @@ images.forEach(img => {
         updateLightbox();
         lightbox.style.display = 'flex';
     });
+});
+
+function copyEmail() {
+const email = document.getElementById("email").textContent;
+navigator.clipboard.writeText(email).then(() => {
+    alert("Adresse e-mail copiée !");
+}, () => {
+    alert("Échec de la copie.");
 });
 
 // Navigation et fermeture
