@@ -194,10 +194,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="contact">CONTACT
-            <p>06.35.18.85.78</p>
-            <p>
-                <span id="email">avacreations.order@gmail.com</span>
-                <button onclick="copyEmail()">Copier</button>
+            <p>Whatsapp : 0635188578</p>
+            <p>Email : 
+                <span id="email_copy">avacreations.order@gmail.com</span>
+                <button onclick="copyEmail()">avacreations.order@gmail.com</button>
             </p>
         </div>
         <div class="bottom-footer"></div>
@@ -273,7 +273,7 @@ images.forEach(img => {
 });
 
 function copyEmail() {
-const email = document.getElementById("email").textContent;
+const email = document.getElementById("email_copy").textContent;
 navigator.clipboard.writeText(email).then(() => {
     alert("Adresse e-mail copiée !");
 }, () => {
