@@ -272,14 +272,6 @@ images.forEach(img => {
     });
 });
 
-function copyEmail() {
-const email = document.getElementById("email_copy").textContent;
-navigator.clipboard.writeText(email).then(() => {
-    alert("Adresse e-mail copiée !");
-}, () => {
-    alert("Échec de la copie.");
-});
-
 // Navigation et fermeture
 function updateLightbox() { lightboxImg.src = imageList[currentIndex]; }
 prevBtn.onclick = () => { currentIndex = (currentIndex - 1 + imageList.length) % imageList.length; updateLightbox(); };
